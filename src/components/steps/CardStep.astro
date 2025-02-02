@@ -1,4 +1,6 @@
 ---
+import ArrowRight from "../icons/ArrowRight.astro";
+
 const { step, title, description, href } = Astro.props;
 ---
 
@@ -8,7 +10,7 @@ const { step, title, description, href } = Astro.props;
     <h3>{title}</h3>
   </div>
   <p>{description}</p>
-  <a href={href}>Ver video</a>
+  <a href={href}>Ver video <ArrowRight /></a>
 </article>
 
 <style>
@@ -60,5 +62,8 @@ const { step, title, description, href } = Astro.props;
     margin-top: 16px;
     color: var(--primary-color);
     font-size: 14px;
+    font-weight: 600;
+    gap: 6px;
+    align-items: center;
   }
 </style>
