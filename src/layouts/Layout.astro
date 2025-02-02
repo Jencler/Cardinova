@@ -1,22 +1,48 @@
 <!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <meta name="generator" content={Astro.generator} />
+    <title>Cardinova | Robótica e innovación</title>
+    <meta
+      name="description"
+      content="Inicia tu negocio de autolavado con nuestra tecnología 100% automatizada. Inversión desde S/3,700 con retorno garantizado."
+    />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/favicon-dark.svg"
+      media="(prefers-color-scheme: dark)"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <slot />
+  </body>
 </html>
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
+<style is:global>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  :root {
+    --border-color: #e5e7eb;
+    --primary-color: rgb(0 152 181);
+    --text-description: rgb(75 85 99);
+  }
+
+  html {
+    font-family: "Geist", serif;
+  }
 </style>

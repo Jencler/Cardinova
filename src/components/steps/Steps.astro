@@ -1,0 +1,84 @@
+---
+import CardStep from "./CardStep.astro";
+
+const Items = [
+  {
+    step: 1,
+    title: "Insertar Modena o Pagar con Yape",
+    description:
+      "Los clientes pagan con monedas de S/1 o escanean un código QR para usar Yape.",
+    href: "#",
+  },
+  {
+    step: 2,
+    title: "Tomar Pistola de Lavado",
+    description:
+      "Los clientes toman la pistola de alta presión para lavar su vehículo.",
+    href: "#",
+  },
+  {
+    step: 3,
+    title: "Lavar el Vehículo",
+    description:
+      "El cliente lava su vehículo de forma sencilla y automatizada.",
+    href: "#",
+  },
+];
+---
+
+<section class="steps">
+  <div class="steps__info">
+    <h2>Lavado Automático en <span>3 Pasos Simples</span></h2>
+    <p>
+      Proceso simple de operación de hidrolavadora desde la inserción de moneda
+      hasta el lavado.
+    </p>
+  </div>
+  <figure class="cards">
+    {
+      Items.map((item) => (
+        <CardStep
+          href={item.href}
+          description={item.description}
+          step={item.step}
+          title={item.title}
+        />
+      ))
+    }
+  </figure>
+</section>
+
+<style>
+  .steps {
+    padding: 32px 0;
+    text-align: center;
+    background: #f9fafb;
+  }
+
+  .steps__info {
+    margin-bottom: 32px;
+
+    & h2 {
+      letter-spacing: -0.05px;
+      font-weight: 700;
+      font-size: 24px;
+
+      & span {
+        color: var(--primary-color);
+      }
+    }
+
+    & p {
+      margin-top: 16px;
+      font-size: 16px;
+      color: var(--text-description);
+      line-height: 24px;
+    }
+  }
+
+  .cards {
+    padding: 0 16px 16px 16px;
+    display: grid;
+    gap: 24px;
+  }
+</style>

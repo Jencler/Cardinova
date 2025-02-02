@@ -1,0 +1,96 @@
+---
+import Check from "../icons/Check.astro";
+
+const Items = [
+  "Sistema 100% automatizado",
+  "Sin necesidad de personal",
+  "Funciona 24/7, incluso mientras duermes",
+  "Soporte técnico incluido",
+];
+---
+
+<section class="hero">
+  <article>
+    <h1>Genera <span>+S/500 Diarios</span> Con Tu Estación de Lavado</h1>
+    <p>
+      Inicia tu negocio de autolavado con nuestra tecnología 100% automatizada.
+      Inversión desde S/3,700 con retorno garantizado.
+    </p>
+    <ul class="list">
+      {
+        Items.map((item) => (
+          <li>
+            <span>
+              <Check />
+            </span>
+            {item}
+          </li>
+        ))
+      }
+    </ul>
+    <a href="#" role="button" class="button">¡Empieza Hoy Mismo!</a>
+  </article>
+  <img class="poster__video" width="100%" src="poster-video.jpg" alt="Poster del video" />
+</section>
+
+<style>
+  .hero {
+    padding: 32px 16px;
+    display: grid;
+    gap: 32px;
+  }
+
+  h1 {
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+
+    & span {
+      color: var(--primary-color);
+    }
+  }
+
+  p {
+    color: var(--text-description);
+    margin-top: 20px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .list {
+    list-style: none;
+    margin-top: 15px;
+
+    & li {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      margin-bottom: 10px;
+
+      & span {
+        color: var(--primary-color);
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+  .button {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-color);
+    color: #fafafa;
+    text-decoration: none;
+    border-radius: 6px;
+    margin-top: 30px;
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+  .poster__video{
+    border-radius: 10px;
+  }
+</style>

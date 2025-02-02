@@ -1,0 +1,35 @@
+---
+import Menu from "../icons/Menu.astro";
+---
+
+<header class="header">
+  <a href="/" class="logo">
+    <img width="118.4" height="28" src="/logo.png" alt="Logo Cardinova " />
+  </a>
+  <button class="btn__menu" role="button" aria-label="Menu">
+    <Menu />
+  </button>
+</header>
+
+<style>
+  .header {
+    width: 100%;
+    height: 56px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 16px;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .btn__menu {
+    border: 1px solid var(--border-color);
+    background-color: transparent;
+    width: 36px;
+    height: 36px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+</style>
