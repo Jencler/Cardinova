@@ -4,7 +4,13 @@ import Menu from "../icons/Menu.astro";
 
 <header class="header">
   <a href="/" class="logo">
-    <img role="img" loading="lazy" class="logo" src="/logo.png" alt="Logo Cardinova " />
+    <img
+      role="img"
+      loading="lazy"
+      class="logo"
+      src="/logo.png"
+      alt="Logo Cardinova "
+    />
   </a>
   <button class="btn__menu" role="button" aria-label="Menu">
     <Menu />
@@ -20,6 +26,20 @@ import Menu from "../icons/Menu.astro";
     align-items: center;
     padding: 0px 16px;
     border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    left: 0;
+
+    animation: header-animate linear both;
+    animation-timeline: scroll(root);
+    animation-range: 0 200px;
+  }
+
+  @keyframes header-animate {
+    to {
+      background: rgba(255, 255, 255, 0.589);
+      backdrop-filter: blur(15px);
+    }
   }
 
   .logo {
@@ -30,7 +50,7 @@ import Menu from "../icons/Menu.astro";
 
   .btn__menu {
     border: 1px solid var(--border-color);
-    background-color: transparent;
+    background-color: #fff;
     width: 36px;
     height: 36px;
     border-radius: 4px;

@@ -1,11 +1,21 @@
 ---
 const year = new Date().getFullYear();
+import Facebook from "../icons/Facebook.astro";
+import Twitter from "../icons/Twitter.astro";
 ---
 
 <footer>
   <section>
     <img src="./logo-cardinova-white.svg" alt="Logo cardinova white" />
     <p>Centro de aprendisaje robótica, desarrollo e innovación.</p>
+    <div class="social__media">
+      <a href="/">
+        <Facebook />
+      </a>
+      <a href="/">
+        <Twitter/>
+      </a>
+    </div>
   </section>
   <section>
     <nav></nav>
@@ -56,6 +66,12 @@ const year = new Date().getFullYear();
     display: flex;
     flex-direction: column;
     gap: 16px;
+  }
+
+  .social__media{
+    padding: 12px 0;
+    display: flex;
+    gap: 10px;
   }
 
   @media (min-width: 640px) {
