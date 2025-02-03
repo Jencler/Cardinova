@@ -1,3 +1,26 @@
+---
+import CardMap from "./CardMap.astro";
+
+const items = [
+  {
+    title: "Lima (4)",
+    description: "Jirón de la Unión, Cercado de Lima, Lima.",
+  },
+  {
+    title: "Arequipa (5)",
+    description: "Avenida Diagonal y Avenida Larco, Miraflores, Lima.",
+  },
+  {
+    title: "San Martin (3)",
+    description: "Calle Los Eucaliptos, San Isidro, Lima.",
+  },
+  {
+    title: "Huancayo (7)",
+    description: "Bajada de Baños, Barranco, Lima.",
+  },
+];
+---
+
 <section class="map">
   <span class="badge">Estaciones a nivel nacional</span>
   <h2>Mapa de Estaciones</h2>
@@ -11,6 +34,13 @@
       width="100%"
       height="480"></iframe>
   </div>
+  <section class="cards__location">
+    {
+      items.map((item) => (
+        <CardMap title={item.title} description={item.description} />
+      ))
+    }
+  </section>
 </section>
 
 <style>
@@ -51,9 +81,17 @@
     border-radius: 8px;
     overflow: hidden;
     border: none;
+    margin-bottom: 32px;
 
     & iframe {
-        border: none;
+      border: none;
     }
+  }
+
+  .cards__location {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 24px;
   }
 </style>

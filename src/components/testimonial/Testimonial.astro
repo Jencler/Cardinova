@@ -1,0 +1,77 @@
+---
+import CardTestimonial from "./CardTestimonial.astro";
+
+const items = [
+  {
+    avatar:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw4xIzlTTRJKIQB1tq1Jbs5Rfj7hU6h1UtPg&s",
+    author: "Luis Torres",
+    description:
+      "AquaExpress fue la mejor decisión. Fácil instalación, soporte técnico excelente y ganancias desde el primer mes.",
+    location: "Lima, Perú",
+  },
+  {
+    avatar:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw4xIzlTTRJKIQB1tq1Jbs5Rfj7hU6h1UtPg&s",
+    author: "Diana Ramirez",
+    description:
+      "Mi negocio creció rápido. La exclusividad de zona me dio ventaja competitiva en mi área.",
+    location: "Arequipa, Perú",
+  },
+  {
+    avatar:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw4xIzlTTRJKIQB1tq1Jbs5Rfj7hU6h1UtPg&s",
+    author: "Andrés López",
+    description:
+      "La recuperación de inversión en solo 7 meses superó mis expectativas. ¡Altamente recomendado!",
+    location: "Trujillo, Perú",
+  },
+];
+---
+
+<section class="testimonial">
+  <h2>Testimonios</h2>
+  <p>+20 Emprendedores Ya Ganan!</p>
+  <div class="grid-testimonials">
+    {
+      items.map((item) => (
+        <CardTestimonial
+          avatar={item.avatar}
+          author={item.author}
+          description={item.description}
+          location={item.location}
+        />
+      ))
+    }
+  </div>
+</section>
+
+<style>
+  .testimonial {
+    width: 100%;
+    padding: 32px 16px;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+  }
+
+  p {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--primary-color);
+    line-height: 24px;
+    margin-top: 16px;
+  }
+
+  .grid-testimonials {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    margin-top: 32px;
+    gap: 24px;
+  }
+</style>

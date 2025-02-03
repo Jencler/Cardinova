@@ -1,0 +1,50 @@
+---
+import Location from "../icons/Location.astro";
+
+const { title, description } = Astro.props;
+---
+
+<figure class="card__location">
+  <h4>
+    <span>
+      <Location />
+    </span>
+    {title}
+  </h4>
+  <p>{description}</p>
+</figure>
+
+<style>
+  .card__location {
+    width: 100%;
+    height: auto;
+    padding: 24px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    background-color: #fff;
+  }
+
+  h4 {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 28px;
+    margin-bottom: 12px;
+    gap: 8px;
+
+    & span {
+      display: flex;
+      align-items: center;
+      color: var(--primary-color);
+    }
+  }
+
+  p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--text-description);
+    text-align: start;
+  }
+</style>

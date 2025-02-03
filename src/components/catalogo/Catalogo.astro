@@ -1,0 +1,117 @@
+---
+import CardCatalogo from "./CardCatalogo.astro";
+
+const items = [
+  {
+    img: "/poster-video.avif",
+    title: "Hidrolavadora de Alta Presión",
+    description:
+      "Potente hidrolavadora de 2400-2600 PSI. Máxima presión y rendimiento asegurados.",
+    href: "/",
+  },
+  {
+    img: "/poster-video.avif",
+    title: "Caja Cobradora",
+    description:
+      "Caja automatizada adaptable para cualquier máquina. Simplifica y optimiza tus cobros.",
+    href: "/",
+  },
+  {
+    img: "/poster-video.avif",
+    title: "Combo 1 (3 máquinas)",
+    description:
+      "Dos hidrolavadoras estándar y una shampoonera con cobro automático.",
+    href: "/",
+  },
+  {
+    img: "/poster-video.avif",
+    title: "Combo 2 (5 máquinas)",
+    description:
+      "Equipo completo para autoservicio: hidrolavadoras, aspiradora y sistemas de shampoo/silicona.",
+    href: "/",
+  },
+];
+---
+
+<section class="catalogo">
+  <h2>Nuestro Catálogo</h2>
+  <p>
+    Descubre hidrolavadoras, accesorios y sistemas automatizados diseñados para
+    maximizar la eficiencia y rentabilidad de tu negocio.
+  </p>
+
+  <div class="grid___catalogo">
+    {
+      items.map((item) => (
+        <CardCatalogo
+          img={item.img}
+          title={item.title}
+          description={item.description}
+          href={item.href}
+        />
+      ))
+    }
+  </div>
+
+  <a href="/">Descargar Catálogo</a>
+</section>
+
+<style>
+  .catalogo {
+    padding: 32px 16px;
+    text-align: center;
+    background: hsl(210deg 20% 98.04%);
+  }
+
+  h2 {
+    letter-spacing: -0.9px;
+    font-weight: 700;
+    font-size: 24px;
+    margin-top: 8px;
+  }
+  p {
+    margin-top: 16px;
+    font-size: 16px;
+    color: var(--text-description);
+    line-height: 24px;
+  }
+
+  .grid___catalogo {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-top: 32px;
+  }
+
+  a {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 0 32px;
+
+    height: 40px;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 8px;
+    background-color: var(--primary-color);
+    max-width: 196px;
+    margin: 24px auto 0;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    transition: background 0.2s ease-in-out;
+  }
+
+  a:hover {
+    background: #007a91;
+  }
+  
+
+  @media (min-width: 640px) {
+    .grid___catalogo {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+</style>
