@@ -1,3 +1,61 @@
-<article class="business__card">
+---
+import Dot from "../icons/Dot.astro";
 
+const { title, list } = Astro.props;
+---
+
+<article class="business__card">
+  <h3>
+    {title}
+  </h3>
+  <ul>
+    {
+      list.map((item: any) => (
+        <li>
+          <span>
+            <Dot />
+          </span>
+          {item}
+        </li>
+      ))
+    }
+  </ul>
 </article>
+
+<style>
+  .business__card {
+    background: #f9fafb;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    padding: 24px;
+    height: auto;
+  }
+
+  h3 {
+    font-weight: 700;
+    text-align: start;
+    font-size: 18px;
+    line-height: 28px;
+    margin-bottom: 16px;
+  }
+
+  ul {
+    list-style: none;
+    text-align: start;
+  }
+
+  li {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    color: var(--text-description);
+    display: flex;
+    align-items: center;
+
+    & span {
+      color: var(--primary-color);
+      display: flex;
+      align-items: center;
+    }
+  }
+</style>

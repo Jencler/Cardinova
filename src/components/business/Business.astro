@@ -1,3 +1,37 @@
+---
+import BusinessCard from "./BusinessCard.astro";
+
+const items = [
+  {
+    title: "Opciones de Inversión",
+    list: [
+      "Hidrolavadora: S/3,700 - S/4,500",
+      "Pack 3 máquinas: S/10,000",
+      "Pack 5 máquinas: S/15,000",
+    ],
+  },
+  {
+    title: "Características",
+    list: [
+      "Baja inversión inicial",
+      "Recuperación en 6-8 meses",
+      "Ingresos desde S/500 diarios",
+      "Exclusividad de zona",
+      "Asesoramiento",
+      "Soporte técnico incluido",
+    ],
+  },
+  {
+    title: "Modelo de Pago",
+    list: ["40% al contrato", "20% en avance", "40% al finalizar"],
+  },
+  {
+    title: "Requisitos Pre-Instalación",
+    list: ["Toma de agua ½ pulgada", "Conexión eléctrica 220V"],
+  },
+];
+---
+
 <section class="business">
   <span class="badge">Comienza tu negocio tecnológico</span>
   <h2>Invierte en Hidrolavadoras Automáticas</h2>
@@ -5,6 +39,10 @@
     En esta sección, te contamos los detalles clave del modelo de negocio y la
     capital de inversión para empezar con tu estación de lavado autoservicio.
   </p>
+
+  <div class="grid__card-business">
+    {items.map((item) => <BusinessCard title={item.title} list={item.list} />)}
+  </div>
 </section>
 
 <style>
@@ -35,5 +73,15 @@
     font-size: 16px;
     color: var(--text-description);
     line-height: 24px;
+  }
+
+  .grid__card-business {
+    width: 100%;
+    margin-top: 32px;
+    display: grid;
+    gap: 24px;
+    margin-left: auto;
+    margin-right: auto;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   }
 </style>
