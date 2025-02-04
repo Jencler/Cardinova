@@ -33,34 +33,38 @@ const items = [
 ];
 ---
 
-<section class="catalogo">
-  <h2>Nuestro Catálogo</h2>
-  <p>
-    Descubre hidrolavadoras, accesorios y sistemas automatizados diseñados para
-    maximizar la eficiencia y rentabilidad de tu negocio.
-  </p>
+<section id="productos" class="container_catalogo">
+  <section class="catalogo">
+    <h2>Nuestro Catálogo</h2>
+    <p>
+      Descubre hidrolavadoras, accesorios y sistemas automatizados diseñados
+      para maximizar la eficiencia y rentabilidad de tu negocio.
+    </p>
 
-  <div class="grid___catalogo">
-    {
-      items.map((item) => (
-        <CardCatalogo
-          img={item.img}
-          title={item.title}
-          description={item.description}
-          href={item.href}
-        />
-      ))
-    }
-  </div>
+    <div class="grid___catalogo">
+      {
+        items.map((item) => (
+          <CardCatalogo
+            img={item.img}
+            title={item.title}
+            description={item.description}
+            href={item.href}
+          />
+        ))
+      }
+    </div>
 
-  <a href="/">Descargar Catálogo</a>
+    <a href="/">Descargar Catálogo</a>
+  </section>
 </section>
 
 <style>
+  .container_catalogo {
+    background: hsl(210deg 20% 98.04%);
+  }
   .catalogo {
     padding: 32px 16px;
     text-align: center;
-    background: hsl(210deg 20% 98.04%);
   }
 
   h2 {
@@ -107,11 +111,56 @@ const items = [
   a:hover {
     background: #007a91;
   }
-  
 
   @media (min-width: 640px) {
     .grid___catalogo {
       grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .catalogo {
+      padding: 64px 16px;
+    }
+
+    h2 {
+      font-size: 30px;
+      line-height: 36px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 28px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    h2 {
+      font-size: 36px;
+      line-height: 40px;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    h2 {
+      font-size: 48px;
+      line-height: 48px;
+    }
+
+    p {
+      max-width: 672px;
+      margin: 16px auto;
+    }
+
+    .catalogo {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .grid___catalogo {
+      margin-top: 40px;
+      margin-bottom: 40px;
+      gap: 36px;
     }
   }
 </style>

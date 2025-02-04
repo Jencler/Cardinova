@@ -1,17 +1,20 @@
 ---
-const items = [
+export const itemsNav = [
   { name: "Cómo funciona", href: "#como-funciona" },
   { name: "Inversión", href: "#inversion" },
   { name: "Mapa", href: "#mapa" },
   { name: "Productos", href: "#productos" },
   { name: "Contacto", href: "#contacto" },
 ];
+
+
+
 ---
 
 <nav class="nav-header">
   <ul>
     {
-      items.map((item) => (
+      itemsNav.map((item) => (
         <li>
           <a href={item.href}>{item.name}</a>
         </li>

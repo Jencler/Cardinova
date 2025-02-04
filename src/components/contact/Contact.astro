@@ -1,47 +1,53 @@
-<section class="contact">
-  <span class="badge">Contacto</span>
-  <h2>Contáctenos</h2>
-  <p>Nos encantaría saber de usted. Complete este formulario.</p>
+<section id="contacto" class="container_contact">
+  <section class="contact">
+    <span class="badge">Contacto</span>
+    <h2>Contáctenos</h2>
+    <p>Nos encantaría saber de usted. Complete este formulario.</p>
 
-  <form>
-    <label for="name">
-      <span>Nombre <span class="required">*</span></span>
-      <input type="text" name="name" placeholder="Nombre" />
-    </label>
+    <form>
+      <div class="name-lastname">
+        <label for="name">
+          <span>Nombre <span class="required">*</span></span>
+          <input type="text" name="name" placeholder="Nombre" />
+        </label>
 
-    <label for="lastname">
-      <span>Apellidos <span class="required">*</span></span>
-      <input type="text" name="lastname" placeholder="Apellidos" />
-    </label>
+        <label for="lastname">
+          <span>Apellidos <span class="required">*</span></span>
+          <input type="text" name="lastname" placeholder="Apellidos" />
+        </label>
+      </div>
 
-    <label for="email">
-      <span>Correo electrónico <span class="required">*</span></span>
-      <input type="text" name="email" placeholder="tu@correo.com" />
-    </label>
-    <label for="phone">
-      <span>Número de celular</span>
-      <input type="text" name="phone" placeholder="+51 999 999 999" />
-    </label>
+      <label for="email">
+        <span>Correo electrónico <span class="required">*</span></span>
+        <input type="text" name="email" placeholder="tu@correo.com" />
+      </label>
+      <label for="phone">
+        <span>Número de celular</span>
+        <input type="text" name="phone" placeholder="+51 999 999 999" />
+      </label>
 
-    <label for="message">
-      <span>Mensaje <span class="required">*</span></span>
-      <textarea name="message" rows="4"></textarea>
-    </label>
+      <label for="message">
+        <span>Mensaje <span class="required">*</span></span>
+        <textarea placeholder="Dejanos un mensaje..." name="message" rows="4"></textarea>
+      </label>
 
-    <div class="politicas">
-      <input class="input-check" type="checkbox" name="check" />
-      <span>Acepta nuestra <a href="/">política de privacidad</a>.</span>
-    </div>
+      <div class="politicas">
+        <input class="input-check" type="checkbox" name="check" />
+        <span>Acepta nuestra <a href="/">política de privacidad</a>.</span>
+      </div>
 
-    <button role="button">Enviar mensaje</button>
-  </form>
+      <button role="button">Enviar mensaje</button>
+    </form>
+  </section>
 </section>
 
 <style>
+  .container_contact {
+    background: hsl(210deg 20% 98.04%);
+  }
   .contact {
     padding: 32px 16px;
     text-align: center;
-    background: hsl(210deg 20% 98.04%);
   }
 
   .badge {
@@ -76,6 +82,7 @@
   }
 
   label {
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -97,6 +104,13 @@
     border: 1px solid var(--border-color);
     color: var(--text-description);
     outline: none;
+    resize: none;
+  }
+
+  .name-lastname {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
   }
 
   .required {
@@ -138,5 +152,58 @@
 
   button:hover {
     background: #007a91;
+  }
+
+  @media (min-width: 640px) {
+    .name-lastname {
+      display: flex;
+      flex-direction: row;
+      gap: 16px;
+      justify-content: space-between;
+    }
+  }
+  @media (min-width: 768px) {
+    .contact {
+      padding: 64px 16px;
+    }
+
+    h2 {
+      font-size: 30px;
+      line-height: 36px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 28px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    h2 {
+      font-size: 36px;
+      line-height: 40px;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    h2 {
+      font-size: 48px;
+      line-height: 48px;
+    }
+
+    p {
+      max-width: 672px;
+      margin: 16px auto;
+    }
+
+    .contact {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    form {
+      max-width: 672px;
+      margin: 40px auto;
+    }
   }
 </style>

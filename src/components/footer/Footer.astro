@@ -2,38 +2,47 @@
 const year = new Date().getFullYear();
 import Facebook from "../icons/Facebook.astro";
 import Twitter from "../icons/Twitter.astro";
+import FooterNav from "../nav/FooterNav.astro";
 ---
 
-<footer>
-  <section>
-    <img src="./logo-cardinova-white.svg" alt="Logo cardinova white" />
-    <p>Centro de aprendisaje robótica, desarrollo e innovación.</p>
-    <div class="social__media">
-      <a href="/">
-        <Facebook />
-      </a>
-      <a href="/">
-        <Twitter/>
-      </a>
+<section>
+  <footer>
+    <section class="container-nav-footer">
+      <div>
+       <a href="/">
+        <img src="./logo-cardinova-white.svg" alt="Logo cardinova white" />
+       </a>
+        <p>Centro de aprendisaje robótica, desarrollo e innovación.</p>
+      </div>
+      <div><FooterNav /></div>
+      <div class="social__media">
+        <a href="/">
+          <Facebook />
+        </a>
+        <a href="/">
+          <Twitter />
+        </a>
+      </div>
+    </section>
+
+    <hr />
+    <div class="content-recervado">
+      <p>© {year} CardiNova. Todos los derechos reservados.</p>
+
+      <p>Powered by <a href="https://doobril.com">Doobril.com</a></p>
     </div>
-  </section>
-  <section>
-    <nav></nav>
-  </section>
-
-  <hr />
-  <div class="content-recervado">
-    <p>© {year} CardiNova. Todos los derechos reservados.</p>
-
-    <p>Powered by <a href="https://doobril.com">Doobril.com</a></p>
-  </div>
-</footer>
+  </footer>
+</section>
 
 <style>
+  section {
+    background-color: var(--primary-color);
+  }
   footer {
     width: 100%;
     padding: 32px 16px;
-    background-color: var(--primary-color);
+    max-width: 1400px;
+    margin: 0 auto;
   }
 
   img {
@@ -68,10 +77,16 @@ import Twitter from "../icons/Twitter.astro";
     gap: 16px;
   }
 
-  .social__media{
+  .social__media {
     padding: 12px 0;
     display: flex;
     gap: 10px;
+  }
+
+  .container-nav-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
   }
 
   @media (min-width: 640px) {
@@ -82,4 +97,25 @@ import Twitter from "../icons/Twitter.astro";
       align-items: center;
     }
   }
+  @media (min-width: 768px) {
+    .container-nav-footer {
+      flex-direction: row;
+      gap: 64px;
+    }
+  }
+  @media (min-width: 1024px) {
+    .container-nav-footer {
+      flex-direction: row;
+      gap: 64px;
+    }
+  }
+
+
+  @media (min-width: 1280px) {
+    .container-nav-footer {
+      flex-direction: row;
+      gap: 120px;
+    }
+  }
+  
 </style>

@@ -1,3 +1,71 @@
-<nav>
-    
-</nav>
+---
+const items1 = [
+  { name: "Cómo funciona", href: "#como-funciona" },
+  { name: "Inversión", href: "#inversion" },
+  { name: "Mapa", href: "#mapa" },
+];
+const items2 = [
+  { name: "Productos", href: "#productos" },
+  { name: "Contacto", href: "#contacto" },
+];
+---
+
+<section class="container_nav-footer">
+  <ul>
+    {
+      items1.map((item) => (
+        <li>
+          <a href={item.href}>{item.name}</a>
+        </li>
+      ))
+    }
+  </ul>
+  <ul>
+    {
+      items2.map((item) => (
+        <li>
+          <a href={item.href}>{item.name}</a>
+        </li>
+      ))
+    }
+  </ul>
+</section>
+
+<style>
+  .container_nav-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    & li a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 20px;
+    }
+  }
+
+  @media (min-width: 330px) {
+    .container_nav-footer {
+      display: flex;
+      flex-direction: row;
+      gap: 64px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .container_nav-footer {
+      display: flex;
+      flex-direction: row;
+      gap: 80px;
+    }
+  }
+
+</style>
