@@ -74,4 +74,44 @@ const items = [
     margin-top: 32px;
     gap: 24px;
   }
+
+  @media (min-width: 768px) {
+    .testimonial {
+      padding: 64px 16px;
+    }
+
+    h2 {
+      font-size: 30px;
+      line-height: 36px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 28px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    h2 {
+      font-size: 36px;
+      line-height: 40px;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    h2 {
+      font-size: 48px;
+      line-height: 48px;
+    }
+
+    p {
+      max-width: 672px;
+      margin: 16px auto;
+    }
+
+    .testimonial {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+  }
 </style>

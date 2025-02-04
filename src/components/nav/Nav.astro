@@ -1,0 +1,74 @@
+---
+const items = [
+  { name: "Cómo funciona", href: "#como-funciona" },
+  { name: "Inversión", href: "#inversion" },
+  { name: "Mapa", href: "#mapa" },
+  { name: "Productos", href: "#productos" },
+  { name: "Contacto", href: "#contacto" },
+];
+---
+
+<nav class="nav-header">
+  <ul>
+    {
+      items.map((item) => (
+        <li>
+          <a href={item.href}>{item.name}</a>
+        </li>
+      ))
+    }
+
+    <button>Quiero Mi Estación</button>
+  </ul>
+</nav>
+
+<style>
+  .nav-header {
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    .nav-header {
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-header ul {
+      display: flex;
+      gap: 16px;
+      list-style: none;
+      align-items: center;
+    }
+
+    .nav-header ul li a {
+      color: var(--text-description);
+      text-decoration: none;
+      font-weight: 500;
+      line-height: 20px;
+      font-size: 14px;
+      text-wrap: nowrap;
+    }
+
+    .nav-header ul li a:hover {
+      color: var(--primary-color);
+    }
+  }
+
+  button {
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: none;
+    background: var(--primary-color);
+    color: #fff;
+    transition: background 0.2s ease-in-out;
+    height: 36px;
+    font-size: 14px;
+    font-weight: 600;
+    text-wrap: nowrap;s
+    line-height: 20px;
+  }
+
+  button:hover {
+    background: #007a91;
+  }
+</style>

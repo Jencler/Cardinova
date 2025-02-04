@@ -58,4 +58,30 @@ const { title, list } = Astro.props;
       align-items: center;
     }
   }
+
+  @media (min-width: 768px) {
+    h3 {
+      font-weight: 700;
+      text-align: start;
+      font-size: 20px;
+      line-height: 28px;
+      margin-bottom: 16px;
+    }
+    ul {
+    list-style: none;
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+    li {
+      font-size: 16px;
+      line-height: 20px;
+      font-weight: 400;
+      display: flex;
+      align-items: center;
+     
+    }
+  }
 </style>

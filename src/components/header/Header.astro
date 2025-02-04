@@ -1,5 +1,6 @@
 ---
 import Menu from "../icons/Menu.astro";
+import Nav from "../nav/Nav.astro";
 ---
 
 <header class="header">
@@ -12,6 +13,7 @@ import Menu from "../icons/Menu.astro";
       alt="Logo Cardinova "
     />
   </a>
+  <Nav />
   <button id="openMenu" class="btn__menu" role="button" aria-label="Menu">
     <Menu />
   </button>
@@ -79,6 +81,24 @@ import Menu from "../icons/Menu.astro";
 
   .aside.open {
     left: 0;
+  }
+
+  @media (min-width: 768px) {
+    .header {
+      height: 64px;
+    }
+    .aside {
+      display: none;
+    }
+    .btn__menu {
+      display: none;
+    }
+
+    .logo {
+      width: 153px;
+      height: 40px;
+      object-fit: contain;
+    }
   }
 </style>
 
