@@ -5,12 +5,12 @@ const { title, description } = Astro.props;
 ---
 
 <figure class="card__location">
-  <h4>
+  <h5>
     <span>
       <Location />
     </span>
     {title}
-  </h4>
+  </h5>
   <p>{description}</p>
 </figure>
 
@@ -24,7 +24,7 @@ const { title, description } = Astro.props;
     background-color: #fff;
   }
 
-  h4 {
+  h5 {
     display: flex;
     align-items: center;
     font-size: 18px;

@@ -6,33 +6,36 @@
 
     <form>
       <div class="name-lastname">
-        <label for="name">
+        <label class="label" for="name">
           <span>Nombre <span class="required">*</span></span>
           <input type="text" name="name" placeholder="Nombre" />
         </label>
 
-        <label for="lastname">
+        <label class="label" for="lastname">
           <span>Apellidos <span class="required">*</span></span>
           <input type="text" name="lastname" placeholder="Apellidos" />
         </label>
       </div>
 
-      <label for="email">
+      <label class="label" for="email">
         <span>Correo electrónico <span class="required">*</span></span>
         <input type="text" name="email" placeholder="tu@correo.com" />
       </label>
-      <label for="phone">
+      <label class="label" for="phone">
         <span>Número de celular</span>
         <input type="text" name="phone" placeholder="+51 999 999 999" />
       </label>
 
-      <label for="message">
+      <label class="label" for="message">
         <span>Mensaje <span class="required">*</span></span>
-        <textarea placeholder="Dejanos un mensaje..." name="message" rows="4"></textarea>
+        <textarea placeholder="Dejanos un mensaje..." name="message" rows="4"
+        ></textarea>
       </label>
 
       <div class="politicas">
-        <input class="input-check" type="checkbox" name="check" />
+        <label for="check">
+          <input class="input-check" type="checkbox" name="check" />
+        </label>
         <span>Acepta nuestra <a href="/">política de privacidad</a>.</span>
       </div>
 
@@ -81,7 +84,7 @@
     gap: 26px;
   }
 
-  label {
+  .label {
     width: 100%;
     display: flex;
     flex-direction: column;
