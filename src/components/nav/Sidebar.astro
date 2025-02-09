@@ -1,0 +1,77 @@
+---
+import Facebook from "../icons/Facebook.astro";
+import Twitter from "../icons/Twitter.astro";
+import SocialMedia from "../social-media/SocialMedia.astro";
+import { itemsNav } from "./Nav.astro";
+---
+
+<section>
+  <img
+    role="img"
+    loading="lazy"
+    class="logo"
+    src="/logo.png"
+    alt="Logo Cardinova "
+  />
+
+  <div class="container-list ">
+
+    <ul>
+        {
+          itemsNav.map((item) => (
+            <li>
+              <a href={item.href}>{item.name}</a>
+            </li>
+          ))
+        }
+    
+        <button>Quiero Mi Estación</button>
+      </ul>
+  </div>
+
+ <SocialMedia/>
+</section>
+
+<style>
+  .logo {
+    width: 120px;
+    height: 32px;
+    object-fit: contain;
+  }
+
+  .container-list {
+    padding: 24px 0;
+  }
+
+   ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    & li a {
+        text-decoration: none;
+        color: var(--text-description);
+        font-size: 14px;
+        
+    }
+   }
+
+   button {
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: none;
+    background: var(--bg-btn);
+    color: #fff;
+    transition: background 0.2s ease-in-out;
+    height: 36px;
+    font-size: 14px;
+    font-weight: 600;
+    text-wrap: nowrap;s
+    line-height: 20px;
+  }
+
+  button:hover {
+    background: var(--bg-btn-hover);
+  }
+</style>

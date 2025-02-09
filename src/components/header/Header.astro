@@ -1,6 +1,7 @@
 ---
 import Menu from "../icons/Menu.astro";
 import Nav from "../nav/Nav.astro";
+import Sidebar from "../nav/Sidebar.astro";
 ---
 
 <header class="header">
@@ -19,7 +20,7 @@ import Nav from "../nav/Nav.astro";
   </button>
 
   <aside class="aside">
-    <p>Menu lateral</p>
+    <Sidebar/>
   </aside>
 </header>
 
@@ -44,7 +45,7 @@ import Nav from "../nav/Nav.astro";
   @keyframes header-animate {
     to {
       background: rgba(0, 0, 0, 0.589);
-      backdrop-filter: blur(15px);
+      backdrop-filter: blur(19px);
     }
   }
 

@@ -1,0 +1,32 @@
+---
+import Facebook from "../icons/Facebook.astro";
+import Twitter from "../icons/Twitter.astro";
+---
+
+<div class="social__media">
+  <a target="_blank" aria-label="Facebook" href="https://www.facebook.com/roboticaSanMartin/">
+    <Facebook />
+  </a>
+  <a target="_blank" aria-label="X" href="https://x.com/edinvd">
+    <Twitter />
+  </a>
+</div>
+
+<style>
+  .social__media {
+    padding: 12px 0;
+    display: flex;
+    gap: 10px;
+  }
+
+  a {
+    font-size: 14px;
+    color: var(--text-description);
+
+    font-weight: 400;
+    line-height: 20px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+</style>
