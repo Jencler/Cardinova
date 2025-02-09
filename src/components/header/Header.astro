@@ -31,10 +31,10 @@ import Nav from "../nav/Nav.astro";
     justify-content: space-between;
     align-items: center;
     padding: 0px 16px;
-    border-bottom: 1px solid var(--border-color);
     position: sticky;
     top: 0;
     left: 0;
+    background-color: transparent;
 
     animation: header-animate linear both;
     animation-timeline: scroll(root);
@@ -43,7 +43,7 @@ import Nav from "../nav/Nav.astro";
 
   @keyframes header-animate {
     to {
-      background: rgba(255, 255, 255, 0.589);
+      background: rgba(0, 0, 0, 0.589);
       backdrop-filter: blur(15px);
     }
   }
@@ -55,8 +55,8 @@ import Nav from "../nav/Nav.astro";
   }
 
   .btn__menu {
-    border: 1px solid var(--border-color);
-    background-color: #fff;
+    border: none;
+    background-color: transparent;
     width: 36px;
     height: 36px;
     border-radius: 4px;
@@ -64,6 +64,7 @@ import Nav from "../nav/Nav.astro";
     justify-content: center;
     align-items: center;
     z-index: 1000;
+    color: var(--text-white);
   }
 
   .aside {
@@ -71,10 +72,9 @@ import Nav from "../nav/Nav.astro";
     top: 0;
     left: -270px;
     width: auto;
-    background-color: #fff;
+    background-color: var(--bg-primary);
     height: 100vh;
     transition: left 0.3s ease-in-out;
-    border-right: 1px solid var(--border-color);
     padding: 24px;
     min-width: 260px;
   }

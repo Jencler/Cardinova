@@ -4,7 +4,7 @@ import CardTestimonial from "./CardTestimonial.astro";
 const items = [
   {
     avatar:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw4xIzlTTRJKIQB1tq1Jbs5Rfj7hU6h1UtPg&s",
+      "./avatar/avatar.png",
     author: "Luis Torres",
     description:
       "AquaExpress fue la mejor decisión. Fácil instalación, soporte técnico excelente y ganancias desde el primer mes.",
@@ -12,7 +12,7 @@ const items = [
   },
   {
     avatar:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw4xIzlTTRJKIQB1tq1Jbs5Rfj7hU6h1UtPg&s",
+      "./avatar/avatar.png",
     author: "Diana Ramirez",
     description:
       "Mi negocio creció rápido. La exclusividad de zona me dio ventaja competitiva en mi área.",
@@ -20,7 +20,7 @@ const items = [
   },
   {
     avatar:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw4xIzlTTRJKIQB1tq1Jbs5Rfj7hU6h1UtPg&s",
+      "./avatar/avatar.png",
     author: "Andrés López",
     description:
       "La recuperación de inversión en solo 7 meses superó mis expectativas. ¡Altamente recomendado!",
@@ -57,12 +57,13 @@ const items = [
     font-size: 24px;
     font-weight: 700;
     line-height: 32px;
+    color: var(--text-white);
   }
 
   p {
     font-size: 16px;
     font-weight: 500;
-    color: var(--primary-color);
+    color: var(--text-description);
     line-height: 24px;
     margin-top: 16px;
   }

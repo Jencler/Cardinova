@@ -24,9 +24,9 @@ const { title, list } = Astro.props;
 
 <style>
   .business__card {
-    background: #f9fafb;
+    background: var(--bg-secondary);
     border-radius: 8px;
-    border: 1px solid var(--border-color);
+    border:none;
     padding: 24px;
     height: auto;
   }
@@ -37,6 +37,7 @@ const { title, list } = Astro.props;
     font-size: 18px;
     line-height: 28px;
     margin-bottom: 16px;
+    color: var(--text-white);
   }
 
   ul {

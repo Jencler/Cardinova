@@ -5,11 +5,16 @@ const { title, description } = Astro.props;
 ---
 
 <figure class="card__location">
+  <img
+    class="location-svg"
+    src="./location.svg"
+    alt="Location icon"
+    title="Icono de location"
+    role="img"draggable="false"
+  />
+
   <h5>
-    <span>
-      <Location />
-    </span>
-    {title}
+    <> {title}</>
   </h5>
   <p>{description}</p>
 </figure>
@@ -21,7 +26,11 @@ const { title, description } = Astro.props;
     padding: 24px;
     border-radius: 8px;
     border: 1px solid var(--border-color);
-    background-color: #fff;
+    background-color: var(--bg-secundary);
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   h5 {
@@ -32,6 +41,7 @@ const { title, description } = Astro.props;
     line-height: 28px;
     margin-bottom: 12px;
     gap: 8px;
+    color: var(--text-white);
 
     & span {
       display: flex;
@@ -40,6 +50,12 @@ const { title, description } = Astro.props;
     }
   }
 
+  .location-svg {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 24px;
+  
+  }
   p {
     font-weight: 400;
     font-size: 14px;

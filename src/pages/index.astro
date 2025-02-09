@@ -13,14 +13,24 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-  <Header />
-  <Hero />
+  <div class="gradient">
+    <Header />
+    <Hero />
+  </div>
   <Steps />
   <Business />
   <Map />
   <Testimonial />
-  <Catalogo />
   <Faq />
+  <Catalogo />
   <Contact />
   <Footer />
 </Layout>
+
+
+<style>
+    .gradient {
+      background: linear-gradient(180deg, #1e1e1e, #13161b, #14171c, #12151a, #111419);
+
+    }
+</style>

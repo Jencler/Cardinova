@@ -4,19 +4,23 @@ import CardMap from "./CardMap.astro";
 const items = [
   {
     title: "Lima (4)",
-    description: "Jirón de la Unión, Cercado de Lima, Lima.",
+    description:
+      "Jirón de la Unión, Cercado de Lima, Lima. Avenida Diagonal y Avenida Larco, Miraflores, Lima. Calle Los Eucaliptos, San Isidro, Lima. Bajada de Baños, Barranco, Lima.",
   },
   {
     title: "Arequipa (5)",
-    description: "Avenida Diagonal y Avenida Larco, Miraflores, Lima.",
+    description:
+      "Jirón de la Unión, Cercado de Lima, Lima. Avenida Diagonal y Avenida Larco, Miraflores, Lima. Calle Los Eucaliptos, San Isidro, Lima. Bajada de Baños, Barranco, Lima.",
   },
   {
     title: "San Martin (3)",
-    description: "Calle Los Eucaliptos, San Isidro, Lima.",
+    description:
+      "Jirón de la Unión, Cercado de Lima, Lima. Avenida Diagonal y Avenida Larco, Miraflores, Lima. Calle Los Eucaliptos, San Isidro, Lima. Bajada de Baños, Barranco, Lima.",
   },
   {
     title: "Huancayo (7)",
-    description: "Bajada de Baños, Barranco, Lima.",
+    description:
+      "Jirón de la Unión, Cercado de Lima, Lima. Avenida Diagonal y Avenida Larco, Miraflores, Lima. Calle Los Eucaliptos, San Isidro, Lima. Bajada de Baños, Barranco, Lima.",
   },
 ];
 ---
@@ -48,7 +52,7 @@ const items = [
 
 <style>
   .map-container {
-    background: #f9fafb;
+    background: var(--bg-secondary);
   }
   .map {
     padding: 32px 16px;
@@ -71,6 +75,7 @@ const items = [
     font-weight: 700;
     font-size: 24px;
     margin-top: 8px;
+    color: var(--text-white);
   }
   p {
     margin-top: 16px;

@@ -46,7 +46,7 @@
 
 <style>
   .container_contact {
-    background: hsl(210deg 20% 98.04%);
+    background: var(--bg-secondary);
   }
   .contact {
     padding: 32px 16px;
@@ -69,6 +69,7 @@
     font-weight: 700;
     font-size: 24px;
     margin-top: 8px;
+    color: var(--text-white);
   }
   p {
     margin-top: 16px;
@@ -93,6 +94,7 @@
     font-size: 14px;
     font-weight: 500;
     line-height: 20px;
+    color: #CECFD2;
   }
 
   input,
@@ -101,7 +103,7 @@
     font-size: 14px;
     font-weight: 500;
     border-radius: 8px;
-    background: #fff;
+    background: var(--bg-primary);
     padding: 12px;
     line-height: 20px;
     border: 1px solid var(--border-color);
@@ -117,7 +119,7 @@
   }
 
   .required {
-    color: red;
+    color: var(--text-description);
     font-size: 14px;
   }
 
@@ -134,27 +136,30 @@
   .input-check {
     width: 16px;
     height: 16px;
+    background-color: transparent;
   }
 
   a {
-    color: var(--primary-color);
+    color: var(--text-description);
     font-weight: 500;
+    text-decoration: underline;
+    text-underline-offset: 3px;
   }
 
   button {
-    background: var(--primary-color);
+    background: var(--bg-btn);
     color: #fff;
     border: none;
     border-radius: 8px;
     height: 44px;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 14px;
     cursor: pointer;
     transition: background 0.2s ease-in-out;
   }
 
   button:hover {
-    background: #007a91;
+    background: var(--bg-btn-hover);
   }
 
   @media (min-width: 640px) {

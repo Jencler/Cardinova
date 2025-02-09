@@ -7,16 +7,21 @@ import FooterNav from "../nav/FooterNav.astro";
 
 <section>
   <footer>
+    <hr />
+
     <section class="container-nav-footer">
       <div>
-       <a href="/">
-        <img src="./logo-cardinova-white.svg" alt="Logo cardinova white" />
-       </a>
+        <a href="/">
+          <img src="./logo.png" alt="Logo cardinova white" />
+        </a>
         <p>Centro de aprendisaje robótica, desarrollo e innovación.</p>
       </div>
       <div><FooterNav /></div>
       <div class="social__media">
-        <a aria-label="Facebook" href="https://www.facebook.com/roboticaSanMartin/">
+        <a
+          aria-label="Facebook"
+          href="https://www.facebook.com/roboticaSanMartin/"
+        >
           <Facebook />
         </a>
         <a aria-label="X" href="https://x.com/edinvd">
@@ -36,7 +41,7 @@ import FooterNav from "../nav/FooterNav.astro";
 
 <style>
   section {
-    background-color: var(--primary-color);
+    background-color: var(--bg-secondary);
   }
   footer {
     width: 100%;
@@ -47,24 +52,28 @@ import FooterNav from "../nav/FooterNav.astro";
 
   img {
     margin-bottom: 16px;
+    width: 142px;
+    height: 32px;
+    object-fit: contain;
   }
   p {
     font-size: 14px;
-    color: #c9e9ef;
+    color: var(--text-description);
     font-weight: 400;
     line-height: 20px;
   }
 
   hr {
     border: none;
-    height: 0.5px;
-    background: #4bb1c3;
+    height: 2px;
+    background: #1e1e1e;
     margin-top: 32px;
     margin-bottom: 32px;
   }
   a {
     font-size: 14px;
-    color: #c9e9ef;
+    color: var(--text-description);
+
     font-weight: 400;
     line-height: 20px;
     cursor: pointer;
@@ -73,7 +82,7 @@ import FooterNav from "../nav/FooterNav.astro";
 
   .content-recervado {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     gap: 16px;
   }
 
@@ -110,12 +119,10 @@ import FooterNav from "../nav/FooterNav.astro";
     }
   }
 
-
   @media (min-width: 1280px) {
     .container-nav-footer {
       flex-direction: row;
       gap: 120px;
     }
   }
-  
 </style>
