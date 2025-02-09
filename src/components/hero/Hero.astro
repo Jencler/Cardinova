@@ -10,6 +10,9 @@ const Items = [
 ---
 
 <section class="hero">
+  <div class="grid-dot"></div>
+  <div class="grid-line"></div>
+
   <article>
     <h1>Genera <span>+S/500 Diarios</span> Con Tu Estación de Lavado</h1>
     <p>
@@ -40,9 +43,39 @@ const Items = [
 
 <style>
   .hero {
+    width: 100%;
+    height: auto;
     padding: 32px 16px;
     display: grid;
     gap: 32px;
+    position: relative;
+  }
+
+  .grid-dot {
+    width: 100%;
+    height: 550px;
+    position: absolute;
+    background-image: url("../../../public/dot.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: -56px;
+    left: 0;
+    display: none;
+    transform: scale(1.5);
+    opacity: 0.3;
+  }
+
+  .grid-line {
+    width: 100%;
+    height: 600px;
+    z-index: -1000;
+    position: absolute;
+    background-image: url("../../../public/lines.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: -56px;
+    opacity: 0.3;
+    left: 0;
   }
 
   h1 {
@@ -113,6 +146,14 @@ const Items = [
     .button {
       max-width: 204px;
     }
+
+    .grid-dot {
+      display: block;
+    }
+
+    .grid-line {
+      display: none;
+    }
   }
 
   @media (min-width: 768px) {
@@ -155,6 +196,8 @@ const Items = [
       padding: 80px 16px;
     }
 
+    
+
     h1 {
       font-size: 48px;
       line-height: 48px;
@@ -180,7 +223,7 @@ const Items = [
       font-weight: 700;
     }
 
-    .hero{
+    .hero {
       max-width: 1400px;
       margin: 0 auto;
     }
