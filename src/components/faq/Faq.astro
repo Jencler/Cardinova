@@ -22,29 +22,34 @@ const items = [
 ];
 ---
 
-<section class="faq">
-  <h2>Preguntas Frecuentes</h2>
-  <p>Respuestas claras a dudas comunes sobre el negocio.</p>
+<section class="container_faq">
+  <section class="faq">
+    <h2>Preguntas Frecuentes</h2>
+    <p>Respuestas claras a dudas comunes sobre el negocio.</p>
 
-  <div class="container-faq">
-    {
-      items.map((item) => (
-        <div>
-          <details open name="ask">
-            <summary>{item.ask}</summary>
-            {item.answer}
-          </details>
-          <hr />
-        </div>
-      ))
-    }
-  </div>
+    <div class="container-faq">
+      {
+        items.map((item) => (
+          <div>
+            <details open name="ask">
+              <summary>{item.ask}</summary>
+              {item.answer}
+            </details>
+            <hr />
+          </div>
+        ))
+      }
+    </div>
+  </section>
 </section>
 
 <style>
+  .container_faq {
+    background: var(--bg-secondary);
+  }
   .faq {
     padding: 32px 16px;
-    background: var(--bg-secondary);
+
     text-align: center;
   }
 
@@ -104,12 +109,12 @@ const items = [
     }
 
     summary {
-    padding: 6px 0;
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 24px;
-    list-style: none;
-  }
+      padding: 6px 0;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 24px;
+      list-style: none;
+    }
   }
 
   @media (min-width: 1024px) {
