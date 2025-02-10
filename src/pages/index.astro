@@ -25,18 +25,18 @@ import Layout from "../layouts/Layout.astro";
   <Footer />
 
   <section class="modal-contact" id="modal">
-    <figure class="modal-card">
+    <a href="https://wa.me/51997879426?text=Hola%2C%20me%20contacto%20desde%20la%20web%20y%20quisiera%20obtener%20más%20información.%20¿Podrían%20ayudarme%3F" target="_blank" class="modal-card">
       <img src="./contact.png" alt="avatar de contacto" />
       <article>
         <p>Jean Cardinova</p>
         <span>+51 997 879 426</span>
       </article>
-    </figure>
+    </a>
   </section>
 
-  <button id="btn" class="burbuja" role="button" title="open modal">
+  <div id="btn" class="burbuja" role="button" title="open modal">
     <img src="./burbuja.svg" alt="Icono whatsapp" />
-  </button>
+  </div>
 </Layout>
 
 <style>
@@ -59,6 +59,7 @@ import Layout from "../layouts/Layout.astro";
   }
 
   .modal-card {
+    text-decoration: none;
     border-radius: 20px;
     padding: 4px 18px 4px 4px;
     background: linear-gradient(90deg, #088ab2 0%, #76c3ef 100%);
