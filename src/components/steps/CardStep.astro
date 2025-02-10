@@ -10,10 +10,12 @@ const { step, title, description, href } = Astro.props;
     <h3>{title}</h3>
   </div>
   <p>{description}</p>
-  <video autoplay loop muted controls class="video">
-    <source src={href} type="video/mp4" />
-    Tu navegador no soporta la reproducción de videos.
-  </video>
+  <div class="container_video">
+    <video autoplay loop muted controls class="video">
+      <source src={href} type="video/mp4" />
+      Tu navegador no soporta la reproducción de videos.
+    </video>
+  </div>
 </article>
 
 <style>
@@ -56,12 +58,22 @@ const { step, title, description, href } = Astro.props;
     text-align: start;
     font-size: 16px;
     margin-top: 16px;
-    margin-bottom: 16px;
+
+  }
+
+  .container_video {
+    position: relative;
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
   }
 
   .video {
-    width: 100%;
     border-radius: 8px;
-    aspect-ratio: 1 /1;
+    width: 100%;
+    left: 0;
+    position: absolute;
+    bottom: -60px;
   }
 </style>
