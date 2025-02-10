@@ -82,7 +82,6 @@ import Layout from "../layouts/Layout.astro";
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
     transition: all 0.2s ease-in-out;
   }
 
@@ -128,6 +127,12 @@ import Layout from "../layouts/Layout.astro";
     font-weight: 500;
     line-height: normal;
     color: var(--text-white);
+  }
+
+  @media (min-width: 1024px) {
+    .burbuja {
+      cursor: pointer;
+    }
   }
 </style>
 
