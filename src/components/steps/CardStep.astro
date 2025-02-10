@@ -10,8 +10,8 @@ const { step, title, description, href } = Astro.props;
     <h3>{title}</h3>
   </div>
   <p>{description}</p>
-  <video autoplay loop class="video">
-    <source src={href} type="video/mp4">
+  <video autoplay loop muted controls class="video">
+    <source src={href} type="video/mp4" />
     Tu navegador no soporta la reproducción de videos.
   </video>
 </article>
