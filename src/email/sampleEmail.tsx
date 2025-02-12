@@ -28,9 +28,7 @@ export const GithubAccessTokenEmail = ({
 }: GithubAccessTokenEmailProps) => (
   <Html>
     <Head />
-    <Preview>
-      A fine-grained personal access token has been added to your account
-    </Preview>
+    <Preview>Somos Cardinova</Preview>
     <Body style={main}>
       <Container style={container}>
         <Img
