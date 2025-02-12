@@ -4,23 +4,32 @@
     <h2>Contáctenos</h2>
     <p>Nos encantaría saber de usted. Complete este formulario.</p>
 
-    <form action="api/send">
+    <form id="#formulario" action="api/send">
       <!--  <div class="name-lastname">
         <label class="label" for="name">
           <span>Nombre <span class="required">*</span></span>
           <input type="text" name="name" placeholder="Nombre" />
         </label>
 
-       
       </div> -->
       <label class="label" for="fullName">
         <span>Nombre completo <span class="required">*</span></span>
-        <input type="text" name="fullName" placeholder="Nombre completo" />
+        <input
+          type="text"
+          name="fullName"
+          id="nombre"
+          placeholder="Nombre completo"
+        />
       </label>
 
       <label class="label" for="email">
         <span>Correo electrónico <span class="required">*</span></span>
-        <input type="text" name="email" placeholder="tu@correo.com" />
+        <input
+          type="text"
+          name="email"
+          id="email"
+          placeholder="tu@correo.com"
+        />
       </label>
       <label class="label" for="phone">
         <span>Número de celular</span>
@@ -29,18 +38,27 @@
 
       <label class="label" for="message">
         <span>Mensaje <span class="required">*</span></span>
-        <textarea placeholder="Dejanos un mensaje..." name="message" rows="4"
-        ></textarea>
+        <textarea
+          id="message"
+          placeholder="Dejanos un mensaje..."
+          name="message"
+          rows="4"></textarea>
       </label>
 
       <div class="politicas">
         <label for="check">
-          <input class="input-check" type="checkbox" name="check" id="check" />
+          <input
+            class="input-check"
+            checked
+            type="checkbox"
+            name="check"
+            id="check"
+          />
         </label>
         <span>Acepta nuestra <a href="/">política de privacidad</a>.</span>
       </div>
 
-      <button role="button">Enviar mensaje</button>
+      <button id="submit" type="submit" role="button">Enviar mensaje</button>
     </form>
   </section>
 </section>
