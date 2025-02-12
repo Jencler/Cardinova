@@ -82,10 +82,12 @@ const items = [
   .map-container {
     background: var(--bg-secondary);
     width: 100%;
+   
   }
   .map {
     padding: 32px 16px;
     text-align: center;
+    max-width: 768px;
   }
 
   .badge {
@@ -116,6 +118,8 @@ const items = [
 
   .map__container {
     width: 100%;
+    max-width: 1000px; /* Controlar el ancho del mapa */
+    margin: 0 auto;
     height: 500px;
     border-radius: 8px;
     overflow: hidden;
