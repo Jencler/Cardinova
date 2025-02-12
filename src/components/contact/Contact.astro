@@ -5,17 +5,18 @@
     <p>Nos encantaría saber de usted. Complete este formulario.</p>
 
     <form action="api/send">
-      <div class="name-lastname">
+      <!--  <div class="name-lastname">
         <label class="label" for="name">
           <span>Nombre <span class="required">*</span></span>
           <input type="text" name="name" placeholder="Nombre" />
         </label>
 
-        <label class="label" for="lastname">
-          <span>Apellidos <span class="required">*</span></span>
-          <input type="text" name="lastname" placeholder="Apellidos" />
-        </label>
-      </div>
+       
+      </div> -->
+      <label class="label" for="fullName">
+        <span>Nombre completo <span class="required">*</span></span>
+        <input type="text" name="fullName" placeholder="Nombre completo" />
+      </label>
 
       <label class="label" for="email">
         <span>Correo electrónico <span class="required">*</span></span>
@@ -94,7 +95,7 @@
     font-size: 14px;
     font-weight: 500;
     line-height: 20px;
-    color: #CECFD2;
+    color: #cecfd2;
   }
 
   input,

@@ -4,23 +4,51 @@ import CardMap from "./CardMap.astro";
 const items = [
   {
     title: "Lima (4)",
-    description:
-      "Jirón de la Unión, Cercado de Lima, Lima. Avenida Diagonal y Avenida Larco, Miraflores, Lima. Calle Los Eucaliptos, San Isidro, Lima. Bajada de Baños, Barranco, Lima.",
+    list: [
+      "Jirón de la Unión.",
+      "Cercado de Lima, Lima.",
+      "Avenida Diagonal y Avenida Larco.",
+      "Miraflores, Lima.",
+      "Calle Los Eucaliptos",
+      "San Isidro, Lima",
+      "Bajada de Baños, Barranco, Lima.",
+    ],
   },
   {
     title: "Arequipa (5)",
-    description:
-      "Jirón de la Unión, Cercado de Lima, Lima. Avenida Diagonal y Avenida Larco, Miraflores, Lima. Calle Los Eucaliptos, San Isidro, Lima. Bajada de Baños, Barranco, Lima.",
+    list: [
+      "Jirón de la Unión.",
+      "Cercado de Lima, Lima.",
+      "Avenida Diagonal y Avenida Larco.",
+      "Miraflores, Lima.",
+      "Calle Los Eucaliptos",
+      "San Isidro, Lima",
+      "Bajada de Baños, Barranco, Lima.",
+    ],
   },
   {
     title: "San Martin (3)",
-    description:
-      "Jirón de la Unión, Cercado de Lima, Lima. Avenida Diagonal y Avenida Larco, Miraflores, Lima. Calle Los Eucaliptos, San Isidro, Lima. Bajada de Baños, Barranco, Lima.",
+    list: [
+      "Jirón de la Unión.",
+      "Cercado de Lima, Lima.",
+      "Avenida Diagonal y Avenida Larco.",
+      "Miraflores, Lima.",
+      "Calle Los Eucaliptos",
+      "San Isidro, Lima",
+      "Bajada de Baños, Barranco, Lima.",
+    ],
   },
   {
     title: "Huancayo (7)",
-    description:
-      "Jirón de la Unión, Cercado de Lima, Lima. Avenida Diagonal y Avenida Larco, Miraflores, Lima. Calle Los Eucaliptos, San Isidro, Lima. Bajada de Baños, Barranco, Lima.",
+    list: [
+      "Jirón de la Unión.",
+      "Cercado de Lima, Lima.",
+      "Avenida Diagonal y Avenida Larco.",
+      "Miraflores, Lima.",
+      "Calle Los Eucaliptos",
+      "San Isidro, Lima",
+      "Bajada de Baños, Barranco, Lima.",
+    ],
   },
 ];
 ---
@@ -36,14 +64,14 @@ const items = [
     <div class="map__container">
       <iframe
         title="mapa"
-        src="https://www.google.com/maps/d/embed?mid=1jzQEiOXMe6bsd75vupkvfwZkTUX5kAE&ehbc=2E312F"
+        src="https://www.google.com/maps/d/embed?mid=1jzQEiOXMe6bsd75vupkvfwZkTUX5kAE&ehbc=2E312F&z=5"
         width="100%"
         height="480"></iframe>
     </div>
     <section class="cards__location">
       {
         items.map((item) => (
-          <CardMap title={item.title} description={item.description} />
+          <CardMap title={item.title} list={item.list} />
         ))
       }
     </section>
