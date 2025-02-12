@@ -1,24 +1,31 @@
+---
+import { actions } from "astro:actions";
+const result = Astro.getActionResult(actions.send);
+
+if (result?.data) {
+  console.log(result.data);
+}
+
+if (result?.error) {
+  console.log(result.error);
+}
+---
+
 <section id="contacto" class="container_contact">
   <section class="contact">
     <span class="badge">Contacto</span>
     <h2>Contáctenos</h2>
     <p>Nos encantaría saber de usted. Complete este formulario.</p>
 
-    <form id="#formulario" action="api/send">
-      <!--  <div class="name-lastname">
-        <label class="label" for="name">
-          <span>Nombre <span class="required">*</span></span>
-          <input type="text" name="name" placeholder="Nombre" />
-        </label>
-
-      </div> -->
-      <label class="label" for="fullName">
+    <form action={actions.send} method="post">
+      <label class="label" for="fullname">
         <span>Nombre completo <span class="required">*</span></span>
         <input
           type="text"
-          name="fullName"
-          id="nombre"
+          name="fullname"
+          id="fullname"
           placeholder="Nombre completo"
+          required
         />
       </label>
 
@@ -29,16 +36,24 @@
           name="email"
           id="email"
           placeholder="tu@correo.com"
+          required
         />
       </label>
       <label class="label" for="phone">
         <span>Número de celular</span>
-        <input type="text" name="phone" placeholder="+51 999 999 999" />
+        <input
+          required
+          type="text"
+          name="phone"
+          placeholder="+51 999 999 999"
+          id="phone"
+        />
       </label>
 
       <label class="label" for="message">
         <span>Mensaje <span class="required">*</span></span>
         <textarea
+          required
           id="message"
           placeholder="Dejanos un mensaje..."
           name="message"
@@ -53,12 +68,13 @@
             type="checkbox"
             name="check"
             id="check"
+            required
           />
         </label>
         <span>Acepta nuestra <a href="/">política de privacidad</a>.</span>
       </div>
 
-      <button id="submit" type="submit" role="button">Enviar mensaje</button>
+      <button type="submit" role="button">Enviar mensaje</button>
     </form>
   </section>
 </section>
