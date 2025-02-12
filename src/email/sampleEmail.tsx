@@ -33,7 +33,13 @@ export const GithubAccessTokenEmail = ({
     </Preview>
     <Body style={main}>
       <Container style={container}>
-        <Img src="https://cardinova.pe/logo.png" width="240" height="32" alt="Cardinova logo" />
+        <Img
+          style={img}
+          src="https://cardinova.pe/logo.png"
+          width="120"
+          height="32"
+          alt="Cardinova logo"
+        />
 
         <Text style={title}>
           <strong>Hola @{username}</strong> Mucho gusto nos contactaste para
@@ -41,7 +47,10 @@ export const GithubAccessTokenEmail = ({
         </Text>
 
         <Section style={section}>
-          <Text><strong>Tu mennsaje: </strong>{message}</Text>
+          <Text>
+            <strong>Tu mennsaje: </strong>
+            {message}
+          </Text>
 
           <Text>
             Nos estaremos comunicando contigo los mas pronto atravez de Whatsap
@@ -91,6 +100,10 @@ const title = {
   lineHeight: 1.25,
 };
 
+const img = {
+  objectFit: "contain" as const,
+};
+
 const section = {
   padding: "24px",
   border: "solid 1px #dedede",
@@ -105,7 +118,7 @@ const text = {
 
 const button = {
   fontSize: "14px",
-  backgroundColor: "#28a745",
+  backgroundColor: "#088ab2",
   color: "#fff",
   lineHeight: 1.5,
   borderRadius: "0.5em",
