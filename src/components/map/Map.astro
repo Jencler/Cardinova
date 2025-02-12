@@ -3,24 +3,52 @@ import CardMap from "./CardMap.astro";
 
 const items = [
   {
-    title: "Arequipa (3)",
-    description:
-      "Jirón de la Unión, Cercado de Lima, Lima.Avenida Diagonal y Avenida Larco, Miraflores, Lima. Calle Los Eucaliptos, San Isidro, Lima. Bajada de Baños, Barranco, Lima.",
+    title: "Lima (4)",
+    list: [
+      "Jirón de la Unión.",
+      "Cercado de Lima, Lima.",
+      "Avenida Diagonal y Avenida Larco.",
+      "Miraflores, Lima.",
+      "Calle Los Eucaliptos",
+      "San Isidro, Lima",
+      "Bajada de Baños, Barranco, Lima.",
+    ],
   },
   {
-    title: "San Martín (2)",
-    description:
-      "Jirón de la Unión, Cercado de Lima, Lima. Avenida Diagonal y Avenida Larco, Miraflores, Lima. Calle Los Eucaliptos, San Isidro, Lima. Bajada de Baños, Barranco, Lima.",
+    title: "Arequipa (5)",
+    list: [
+      "Jirón de la Unión.",
+      "Cercado de Lima, Lima.",
+      "Avenida Diagonal y Avenida Larco.",
+      "Miraflores, Lima.",
+      "Calle Los Eucaliptos",
+      "San Isidro, Lima",
+      "Bajada de Baños, Barranco, Lima.",
+    ],
   },
   {
-    title: "Ayacucho (2)",
-    description:
-      "Jirón de la Unión, Cercado de Lima, Lima. Avenida Diagonal y Avenida Larco, Miraflores, Lima. Calle Los Eucaliptos, San Isidro, Lima. Bajada de Baños, Barranco, Lima.",
+    title: "San Martin (3)",
+    list: [
+      "Jirón de la Unión.",
+      "Cercado de Lima, Lima.",
+      "Avenida Diagonal y Avenida Larco.",
+      "Miraflores, Lima.",
+      "Calle Los Eucaliptos",
+      "San Isidro, Lima",
+      "Bajada de Baños, Barranco, Lima.",
+    ],
   },
   {
-    title: "Junín (1)",
-    description:
-      "Jirón de la Unión, Cercado de Lima, Lima. Avenida Diagonal y Avenida Larco, Miraflores, Lima. Calle Los Eucaliptos, San Isidro, Lima. Bajada de Baños, Barranco, Lima.",
+    title: "Huancayo (7)",
+    list: [
+      "Jirón de la Unión.",
+      "Cercado de Lima, Lima.",
+      "Avenida Diagonal y Avenida Larco.",
+      "Miraflores, Lima.",
+      "Calle Los Eucaliptos",
+      "San Isidro, Lima",
+      "Bajada de Baños, Barranco, Lima.",
+    ],
   },
 ];
 ---
@@ -36,14 +64,14 @@ const items = [
     <div class="map__container">
       <iframe
         title="mapa"
-        src="https://www.google.com/maps/d/embed?mid=1jzQEiOXMe6bsd75vupkvfwZkTUX5kAE&ehbc=2E312F"
+        src="https://www.google.com/maps/d/embed?mid=1jzQEiOXMe6bsd75vupkvfwZkTUX5kAE&ehbc=2E312F&z=5"
         width="100%"
         height="480"></iframe>
     </div>
     <section class="cards__location">
       {
         items.map((item) => (
-          <CardMap title={item.title} description={item.description} />
+          <CardMap title={item.title} list={item.list} />
         ))
       }
     </section>
@@ -54,10 +82,12 @@ const items = [
   .map-container {
     background: var(--bg-secondary);
     width: 100%;
+   
   }
   .map {
     padding: 32px 16px;
     text-align: center;
+    max-width: 768px;
   }
 
   .badge {
@@ -88,6 +118,8 @@ const items = [
 
   .map__container {
     width: 100%;
+    max-width: 1000px; /* Controlar el ancho del mapa */
+    margin: 0 auto;
     height: 500px;
     border-radius: 8px;
     overflow: hidden;

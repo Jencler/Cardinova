@@ -1,7 +1,5 @@
 ---
-import Location from "../icons/Location.astro";
-
-const { title, description } = Astro.props;
+const { title, list } = Astro.props;
 ---
 
 <figure class="card__location">
@@ -10,13 +8,18 @@ const { title, description } = Astro.props;
     src="./location.svg"
     alt="Location icon"
     title="Icono de location"
-    role="img"draggable="false"
+    role="img"
+    draggable="false"
   />
 
   <h5>
     <> {title}</>
   </h5>
-  <p>{description}</p>
+  <ul>
+    {list.map((item : any) => <li>
+      <p>{item}</p>
+    </li>)}
+  </ul>
 </figure>
 
 <style>
@@ -54,7 +57,6 @@ const { title, description } = Astro.props;
     width: 48px;
     height: 48px;
     margin-bottom: 24px;
-  
   }
   p {
     font-weight: 400;
@@ -62,5 +64,9 @@ const { title, description } = Astro.props;
     line-height: 20px;
     color: var(--text-description);
     text-align: start;
+  }
+
+  ul {
+    color: var(--primary-color);
   }
 </style>
