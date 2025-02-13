@@ -29,7 +29,7 @@ export const server = {
 
       const { data, error } = await resend.emails.send({
         from: "Cardinova <info@cardinova.pe>",
-        to: [email],
+        to: ["info@cardinova.pe"],
         subject: `Cardinova te saluda ${fullname} 🙂.`,
         html,
         text,

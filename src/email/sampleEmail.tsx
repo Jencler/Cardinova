@@ -46,12 +46,12 @@ export const GithubAccessTokenEmail = ({
 
         <Section style={section}>
           <Text>
-            <strong>Tu mennsaje: </strong>
+            <strong>Tu mensaje: </strong>
             {message}
           </Text>
 
           <Text>
-            Nos estaremos comunicando contigo los mas pronto atravez de Whatsap
+            Nos estaremos comunicando contigo los mas pronto atravez de Whatsapp
             con tu número:
             <strong> {phone}</strong>
           </Text>
