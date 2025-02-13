@@ -41,12 +41,17 @@ const Items = [
         class="button">¡Empieza Hoy Mismo!</a
       >
     </article>
-    <img
-      loading="lazy"
-      class="poster__video"
-      src="poster-video.avif"
-      alt="Poster del video"
-    />
+    <div class="poster__video">
+      <iframe
+        width="100%"
+        height="328"
+        src="https://www.youtube.com/embed/363QXGo4dWs?si=iYB9WsxEOajQ_lwV"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen></iframe>
+    </div>
   </section>
 </section>
 
@@ -167,8 +172,10 @@ const Items = [
   .poster__video {
     border-radius: 10px;
     width: 100%;
-
+    aspect-ratio: 9 /16;
     object-fit: cover;
+    border-radius: 8px;
+    overflow: hidden;
   }
 
   @media (min-width: 640px) {
